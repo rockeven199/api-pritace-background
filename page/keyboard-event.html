@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>keyboard-event</title>
+  <style>
+    #show {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="show"></p>
+</body>
+<script>
+  window.onkeydown = function (event) {
+    event.preventDefault();
+    let pressKey = event.code.replace('Key', '') || event.keyCode();
+    document.querySelector("#show").innerHTML = pressKey
+    let pressKeyTwo = event.code.replace('Key', '') || event.keyCode();
+    if (event.ctrlKey && pressKeyTwo === 'C') {
+      alert('ctrl+c')
+    }
+  }
+
+  // window.onkeydown = function (event) {
+  //   event.preventDefault();
+  //   let pressKey = event.code.replace('Key', '') || event.keyCode();
+  //   let pressKeyTow = event.code.replace('Key', '') || event.keyCode();
+  //   if(pressKey==='ctrl'&&pressKeyTow==='c'){
+  //     alert('ctrl+c')
+  //   }
+  // }
+</script>
+
+</html>
