@@ -14,5 +14,21 @@
   {
     "src": "keyboard-event.html",
     "name": "keyboard-event"
+  },
+  {
+    "src": "random-title.html",
+    "name": "random-title"
+  },
+  {
+    "src": "multiple-group-toggle-form.html",
+    "name": "multiple-group-toggle-form"
+  },
+  {
+    "cookie": "cookie-and-alert.html",
+    "name": "cookie-and-alert"
+  },
+  {
+    "cookie": "auth-code.html",
+    "name": "auth-code"
   }
 ]

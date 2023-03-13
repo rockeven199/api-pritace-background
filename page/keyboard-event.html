@@ -14,14 +14,13 @@
 </head>
 
 <body>
-  <p id="show"></p>
+  <span id="show"></span><span id="show-two"></span>
 </body>
 <script>
   window.onkeydown = function (event) {
     event.preventDefault();
     let pressKey = event.code.replace('Key', '') || event.keyCode();
     document.querySelector("#show").innerHTML = pressKey
-    let pressKeyTwo = event.code.replace('Key', '') || event.keyCode();
     if (event.ctrlKey && pressKeyTwo === 'C') {
       alert('ctrl+c')
     } else if (event.ctrlKey && pressKeyTwo === 'X') {
@@ -30,14 +29,6 @@
       alert('ctrl+v')
     }
   }
-
-  // window.onkeydown = function (event) {
-  //   event.preventDefault();
-  //   let pressKey = event.code.replace('Key', '') || event.keyCode();
-  //   let pressKeyTow = event.code.replace('Key', '') || event.keyCode();
-  //   if(pressKey==='ctrl'&&pressKeyTow==='c'){
-  //     alert('ctrl+c')
-  //   }
   // }
 </script>
 
