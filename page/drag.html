@@ -17,15 +17,14 @@
       cursor: move;
       background-color: rgb(0, 255, 251);
       position: absolute;
+      left: 200px;
+      right: 200px;
     }
 
-
-    .box2 {
+    .box-tow {
       width: 150px;
       height: 150px;
-      cursor: move;
-      background-color: rgb(51, 255, 0);
-      position: absolute;
+      background-color: rgb(38, 38, 38);
     }
   </style>
 </head>
@@ -33,8 +32,7 @@
 <body>
   <div class="box">
   </div>
-  <div class="box2">
-
+  <div class="box-tow">
   </div>
   <script>
     let canMove = false;
@@ -42,9 +40,9 @@
     let x = 0,
       y = 0;
     //屏幕的宽度-自身的宽度=可移动的最大宽度
-    // let maxLeft = window.innerWidth - box.offsetWidth;
+    let maxLeft = window.innerWidth - box.offsetWidth;
     //屏幕的高度-自身的高度=可移动的最大高度
-    // let maxTop = window.innerHeight - box.offsetHeight;
+    let maxTop = window.innerHeight - box.offsetHeight;
     box.onmousedown = function (e) {
       //只有鼠标按下onmousemove才会执行
       canMove = true;
