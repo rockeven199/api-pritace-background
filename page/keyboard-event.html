@@ -24,6 +24,10 @@
     let pressKeyTwo = event.code.replace('Key', '') || event.keyCode();
     if (event.ctrlKey && pressKeyTwo === 'C') {
       alert('ctrl+c')
+    } else if (event.ctrlKey && pressKeyTwo === 'X') {
+      alert('ctrl+x')
+    } else if (event.ctrlKey && pressKeyTwo === 'V') {
+      alert('ctrl+v')
     }
   }
 
