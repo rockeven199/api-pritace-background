@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拖拽案例</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      cursor: move;
+      background-color: rgb(0, 255, 251);
+      position: absolute;
+    }
+
+
+    .box2 {
+      width: 150px;
+      height: 150px;
+      cursor: move;
+      background-color: rgb(51, 255, 0);
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+  </div>
+  <div class="box2">
+
+  </div>
+  <script>
+    let canMove = false;
+    let box = document.querySelector(".box");
+    let x = 0,
+      y = 0;
+    //屏幕的宽度-自身的宽度=可移动的最大宽度
+    // let maxLeft = window.innerWidth - box.offsetWidth;
+    //屏幕的高度-自身的高度=可移动的最大高度
+    // let maxTop = window.innerHeight - box.offsetHeight;
+    box.onmousedown = function (e) {
+      //只有鼠标按下onmousemove才会执行
+      canMove = true;
+      //确定鼠标的点击位置，点击哪里就保持不变
+      x = e.pageX - box.offsetLeft;
+      y = e.pageY - box.offsetTop;
+    }
+
+    window.onmousemove = function (e) {
+      // 阻止默认行为，防止文字被拖动
+      e.preventDefault();
+      if (canMove) {
+        let left = e.pageX - x;
+        let top = e.pageY - y;
+        box.style.left = left + "px";
+        box.style.top = top + "px";
+      }
+    }
+
+    window.onblur = function (e) {
+      canMove = false;
+    }
+    window.onmouseup = function (e) {
+      canMove = false;
+    }
+  </script>
+</body>
+
+</html>
