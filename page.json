@@ -24,11 +24,15 @@
     "name": "multiple-group-toggle-form"
   },
   {
-    "cookie": "cookie-and-alert.html",
+    "src": "cookie-and-alert.html",
     "name": "cookie-and-alert"
   },
   {
-    "cookie": "auth-code.html",
+    "src": "auth-code.html",
     "name": "auth-code"
+  },
+  {
+    "src": "multiple-frame.html",
+    "name": "multiple-frame"
   }
 ]
