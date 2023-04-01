@@ -34,5 +34,9 @@
   {
     "src": "multiple-frame.html",
     "name": "multiple-frame"
+  },
+  {
+    "src": "select.html",
+    "name": "select"
   }
 ]
