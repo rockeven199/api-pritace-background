@@ -38,5 +38,9 @@
   {
     "src": "select.html",
     "name": "select"
+  },
+  {
+    "src":"alert.html",
+    "name":"alert"
   }
 ]
